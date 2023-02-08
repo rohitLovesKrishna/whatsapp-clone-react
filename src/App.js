@@ -1,10 +1,11 @@
 import './App.css';
-
+import { WhatsApp } from './components';
+import React from 'react';
 function App() {
   return (
-    <div className="App">
-
-    </div>
+ <React.Fragment>
+<WhatsApp/>
+ </React.Fragment>
   );
 }
 
