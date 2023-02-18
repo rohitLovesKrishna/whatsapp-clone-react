@@ -1,10 +1,10 @@
-#Getting Started with React Calculator
+#Getting Started with React Whats-App-Clone
 `Developer`: Rohit Ambawata
 
 ##Terminal Part
 Open Editor 'Suggestion: Use - VS Code' and open terminal from left - upper side tabs. Now just clone this git as below :
 
-`Step 1`:Copy this and paste it in your terminal: git clone https://github.com/rohitLovesKrishna/calculator-using-react.git
+`Step 1`:Copy this and paste it in your terminal: git clone https://github.com/rohitLovesKrishna/whatsapp-clone-react.git
 
 `Step 2`: npm install (this will install node modules in the directory)
 
