@@ -1,8 +1,8 @@
-#Getting Started with React Whats-App-Clone
+# Getting Started with React Whats-App-Clone
 
-###Developer: Rohit Ambawata
+### Developer: Rohit Ambawata
 
-##Terminal Part
+## Terminal Part
 Open Editor 'Suggestion: Use - VS Code' and open terminal from left - upper side tabs. Now just clone this git as below :
 
 `Step 1`:Copy this and paste it in your terminal: git clone https://github.com/rohitLovesKrishna/whatsapp-clone-react.git
@@ -13,4 +13,4 @@ Open Editor 'Suggestion: Use - VS Code' and open terminal from left - upper side
 
 `Step 4`: Open your browser and on http://localhost:3000 the project is live.
 
-**Note: Hope [Node JS] is already installed in your PC globally
+** Note: Hope [Node JS] is already installed in your PC globally
