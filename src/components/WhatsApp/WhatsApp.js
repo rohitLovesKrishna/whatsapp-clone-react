@@ -1,9 +1,9 @@
 import styles from './WhatsApp.module.css'
 import { MdOutlineGroups } from 'react-icons/md'
-import { BiShapeCircle, BiFilter } from 'react-icons/bi'
+import { BiShapeCircle} from 'react-icons/bi'
 import { BsChatLeftText, BsThreeDotsVertical } from 'react-icons/bs'
+import { profilePhoto,Search,Chats} from '../'
 
-import { chatImage, profilePhoto } from '../'
 const WhatsApp = ()=>{
 
     return (
@@ -22,14 +22,11 @@ const WhatsApp = ()=>{
                                 <span title='Menu'><BsThreeDotsVertical style={{ cursor: 'pointer', color: 'white' }} /></span>
                             </div>
                         </div>
-                        <div className={styles.searchSection}>
-                            <span className='search'><input type="text" placeholder='Search or start new chat' /></span>
-                            <span title="Unread chats filter" className='filter'><BiFilter style={{ cursor: 'pointer', color: 'white' }} /></span>
-                        </div>
+                        <Search/>
                     </div>
-    <div className={styles.userSection}></div>
+ <Chats/>
                 </div>
-<div className={styles.bigArea}></div>
+<div className={styles.bigArea}></div> 
         </div>
         </>
     )

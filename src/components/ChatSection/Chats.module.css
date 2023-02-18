@@ -1,0 +1,82 @@
+.userSection {
+    height: 85vh;
+    background-color: #10191f;
+    overflow-y: scroll;
+}
+.userSection::-webkit-scrollbar{
+    display: none;
+}
+.chatPerHead{
+        color: white;
+            font-weight: 600;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 13%;
+    flex-direction: row;
+                margin-top: 5px;
+}
+.chatPerHead:hover{
+cursor: pointer;
+background-color: #1f313c;
+}
+.chatPerHead .image {
+width: 60px;
+height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chatPerHead .image img {
+    width: 84%;
+    height: 60%;
+    border-radius: 50%;
+}
+.chatPerHead .personDetails {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+width: 90%;
+padding-left: 10px;
+height: 100%;
+border-bottom: 0.20px solid rgba(84, 84, 84,0.25);
+border-top: 0.20px solid rgba(84, 84, 84,0.25);
+}
+.titleMessage{
+    height: 100%;
+    width: 100%;
+display: flex;
+flex-direction: column;
+}
+.titleMessage h4 {
+margin-bottom: -20px;
+}
+.timeNotification{
+    color: rgb(5, 159, 5);
+    height: 100%;
+    width: 90px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.timeNotification :nth-child(2) {
+border-radius: 50%;
+background-color: rgb(5, 159, 5);
+color: black;
+width: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 5px;
+}
+@media only screen and (max-width: 800px) {
+.timeNotification {
+width: 100px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .timeNotification {
+        width: 120px;
+    }
+}
