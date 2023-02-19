@@ -1,11 +1,20 @@
 import styles from './WhatsApp.module.css'
+import React from 'react'
 import { MdOutlineGroups } from 'react-icons/md'
 import { BiShapeCircle} from 'react-icons/bi'
 import { BsChatLeftText, BsThreeDotsVertical } from 'react-icons/bs'
 import { profilePhoto,Search,Chats} from '../'
 
-const WhatsApp = ()=>{
+const WhatsApp = (props)=>{
+const [searching,setSearching] = React.useState(false);
+    const [text, setText] = React.useState('');
 
+    const searchedFriend = (searchedText)=>{
+        setText(searchedText);
+        setTimeout(() => {
+            setSearching(true);
+        }, 1)
+    }
     return (
         <>
         <div className={styles.main__box}>
@@ -22,9 +31,9 @@ const WhatsApp = ()=>{
                                 <span title='Menu'><BsThreeDotsVertical style={{ cursor: 'pointer', color: 'white' }} /></span>
                             </div>
                         </div>
-                        <Search/>
+                        <Search searchedFriend={searchedFriend}/>
                     </div>
- <Chats/>
+                    <Chats isSearching={searching} searchedFriend={text} positions={props.positions} onClick = {props.onClick}/>
                 </div>
 <div className={styles.bigArea}></div> 
         </div>
