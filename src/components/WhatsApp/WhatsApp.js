@@ -1,11 +1,14 @@
 import styles from './WhatsApp.module.css'
-import React from 'react'
+import React,{useState} from 'react'
 import { MdOutlineGroups } from 'react-icons/md'
 import { BiShapeCircle} from 'react-icons/bi'
 import { BsChatLeftText, BsThreeDotsVertical } from 'react-icons/bs'
-import { profilePhoto,Search,Chats} from '../'
+import { profilePhoto, Search, Chats, ChatBigArea,Data } from '../'
 
 const WhatsApp = (props)=>{
+const [clicked,setClicked] = useState(false)
+    const [user, setUser] = useState(0)
+
 const [searching,setSearching] = React.useState(false);
     const [text, setText] = React.useState('');
 
@@ -14,6 +17,10 @@ const [searching,setSearching] = React.useState(false);
         setTimeout(() => {
             setSearching(true);
         }, 1)
+    }
+    const yesClicked = (id)=>{
+setClicked(true);
+        setUser(id)
     }
     return (
         <>
@@ -33,9 +40,9 @@ const [searching,setSearching] = React.useState(false);
                         </div>
                         <Search searchedFriend={searchedFriend}/>
                     </div>
-                    <Chats isSearching={searching} searchedFriend={text} positions={props.positions} onClick = {props.onClick}/>
+                    <Chats isSearching={searching} searchedFriend={text} positions={props.positions} onClick = {yesClicked}/>
                 </div>
-<div className={styles.bigArea}></div> 
+                <ChatBigArea  clicked = {clicked} data={Data} user= {user}/>
         </div>
         </>
     )

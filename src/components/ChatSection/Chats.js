@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Chats.module.css'
 import {Data} from '../'
 export default function Chats(props) {
+    
     const { isSearching, searchedFriend } = props;
     const Data2 = Data.filter((item) => {
      searchedFriend.trim().toLowerCase()
@@ -16,7 +17,7 @@ export default function Chats(props) {
       <div className={styles.userSection}>
           {!isSearching || searchedFriend.trim().length < 1 ?  Data.map((item)=>{
             return(
-                <div onContextMenu={(e)=>rightClicked(e)} key={item.id} className={styles.chatPerHead} onClick={(e)=>props.onClick(e)}>
+                <div onContextMenu={(e)=>rightClicked(e)} key={item.id} className={styles.chatPerHead} onClick={()=>props.onClick(item.id)}>
               <div className={styles.image}>
                   <img src={require('../assests/profilePhoto.jpg')} alt="profile" />
               </div>
@@ -34,7 +35,7 @@ export default function Chats(props) {
           )
           }) : Data2.map((item) => {
               return (
-                  <div key={item.id} className={styles.chatPerHead}>
+                  <div key={item.id} className={styles.chatPerHead} onClick={() => props.onClick(item.id)}>
                       <div className={styles.image}>
                           <img src={require('../assests/profilePhoto.jpg')} alt="profile" />
                       </div>

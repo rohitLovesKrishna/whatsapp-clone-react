@@ -5,3 +5,4 @@ export { default as Search } from './Search/Search';
 export { default as Chats } from './ChatSection/Chats';
 export { default as Data } from './Data/Data';
 export { default as RightClickedMenu } from './RightClickedMenu/RIghtClickedMenu';
+export { default as ChatBigArea } from './ChatBigArea/ChatBigArea'
