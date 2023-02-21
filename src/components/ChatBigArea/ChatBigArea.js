@@ -19,7 +19,15 @@ export default function ChatBigArea(props) {
             <span title='Menu'><BsThreeDotsVertical style={{ cursor: 'pointer', color: 'white' }} /></span>
           </div>
         </div>
-        <div className='chatArea'></div>
+        <div className='chatArea'>
+          <div className='messageByUser'>
+            <span>{props.data[props.user].message}</span>
+            <span>{props.data[props.user].time}</span>
+          </div>
+          <div className='messageByMe'><span>{props.data[props.user].message}</span>
+            <span>{props.data[props.user].time}</span>
+          </div>
+        </div>
         <div className='typingArea'>
           <span title='emoji'><BsEmojiSmile style={{ cursor: 'pointer', color: 'white', fontSize: '30px', marginLeft: '10px' }} /></span>
           <span title='attach'><ImAttachment style={{ cursor: 'pointer', color: 'white', fontSize: '30px',marginLeft:'10px' }} /></span>

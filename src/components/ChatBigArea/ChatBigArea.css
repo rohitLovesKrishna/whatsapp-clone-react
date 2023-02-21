@@ -54,6 +54,13 @@
         height: 80%;
     width: 100%;
             background-color: transparent;
+            overflow-y: scroll;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+}
+.chatArea::-webkit-scrollbar {
+display: none;
 }
 .typingArea{
             height: 11%;
@@ -74,4 +81,25 @@ outline: none;
 }
 .typingArea :nth-child(3)::placeholder {
     color: white;
+}
+.messageByUser,.messageByMe{
+    color: white;
+    font-family: cursive;
+    font-weight: 900;
+    padding: 10px 20px 10px 30px;
+    background-color: green;
+    border-bottom-right-radius: 80px;
+    border-top-left-radius: 80px;
+    margin: 20px 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.messageByMe {
+    background-color: rgb(54, 22, 93);
+    padding-left: 30px;
+}
+.messageByUser :nth-child(2),.messageByMe :nth-child(2) {
+font-size: 10px;
+margin-left: 30px;
 }
